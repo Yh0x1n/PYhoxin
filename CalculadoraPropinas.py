@@ -32,5 +32,3 @@ root = Tk()
 calculadora = Propinas(root)
 root.config(bg = "dark slate gray")
 root.mainloop()
-
-
