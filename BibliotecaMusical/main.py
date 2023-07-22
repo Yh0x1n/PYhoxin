@@ -4,6 +4,7 @@ buscar canciones, álbumes y artistas.
 """
 
 from tkinter import *
+import functions
 
 #Ventana
 root = Tk()
@@ -20,7 +21,8 @@ box.columnconfigure(2, weight = 1)
 
 #Botones
 btn_agregar = Button(root, text = "Agregar",width = 5, borderwidth = 3, relief = "solid",
-                       bg = "dark slate gray", fg = "white", font = ("Roboto", 10, "bold"))
+                       bg = "dark slate gray", fg = "white", font = ("Roboto", 10, "bold"),
+                       command = function.agg())
 btn_agregar.place(x = 10, y = 10)
 
 btn_buscar = Button(root, text = "Buscar", width = 5, borderwidth = 3, relief = "solid",
