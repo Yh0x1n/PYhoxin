@@ -7,11 +7,36 @@ from tkinter import *
 
 #Ventana
 root = Tk()
+root.title("Biblioteca Musical")
 root.geometry('300x600')
 root.configure(bg = 'gray')
 
 #Lista
-box = Listbox(root, borderwidth = 3, relief = "solid")
+box = Listbox(root, borderwidth = 3, relief = "solid", font = ("Roboto", 12, "bold"))
 box.place(x = 10, y = 50, width = 280, height = 500)
+box.columnconfigure(0, weight = 1)
+box.columnconfigure(1, weight = 1)
+box.columnconfigure(2, weight = 1)
+
+#Botones
+btn_agregar = Button(root, text = "Agregar",width = 5, borderwidth = 3, relief = "solid",
+                       bg = "dark slate gray", fg = "white", font = ("Roboto", 10, "bold"))
+btn_agregar.place(x = 10, y = 10)
+
+btn_buscar = Button(root, text = "Buscar", width = 5, borderwidth = 3, relief = "solid",
+                       bg = "light gray", fg = "black", font = ("Roboto", 10, "bold"))
+btn_buscar.place(x = 115, y = 10)
+
+btn_eliminar = Button(root, text = "Eliminar", width = 5, borderwidth = 3, relief = "solid",
+                         bg = "dark red", fg = "white", font = ("Roboto", 10, "bold"))
+btn_eliminar.place(x = 218, y = 10)
+
+btn_salir = Button(root, text = "Salir", width = 5, borderwidth = 3, relief = "solid",
+                   bg = "white", fg = "black", font = ("Roboto", 10, "bold"))
+btn_salir.place(x = 218, y = 550)
+
+#Scrollbar
+bar = Scrollbar(box, borderwidth = 2, relief = "flat")
+bar.pack(side = RIGHT, fill = Y)
 
 root.mainloop()
