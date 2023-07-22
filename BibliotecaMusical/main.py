@@ -22,7 +22,7 @@ box.columnconfigure(2, weight = 1)
 #Botones
 btn_agregar = Button(root, text = "Agregar",width = 5, borderwidth = 3, relief = "solid",
                        bg = "dark slate gray", fg = "white", font = ("Roboto", 10, "bold"),
-                       command = function.agg())
+                       command = functions.agg)
 btn_agregar.place(x = 10, y = 10)
 
 btn_buscar = Button(root, text = "Buscar", width = 5, borderwidth = 3, relief = "solid",
@@ -34,7 +34,8 @@ btn_eliminar = Button(root, text = "Eliminar", width = 5, borderwidth = 3, relie
 btn_eliminar.place(x = 218, y = 10)
 
 btn_salir = Button(root, text = "Salir", width = 5, borderwidth = 3, relief = "solid",
-                   bg = "white", fg = "black", font = ("Roboto", 10, "bold"))
+                   bg = "white", fg = "black", font = ("Roboto", 10, "bold"),
+                   command = root.destroy)
 btn_salir.place(x = 218, y = 550)
 
 #Scrollbar

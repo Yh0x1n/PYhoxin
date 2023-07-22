@@ -1,24 +1,16 @@
-import tkinter as tk
-from tkinter import ttk
+from tkinter import *
 
-def main():
-    root = tk.Tk()
-    root.title("Listbox Example")
+def clear_placeholder(event):
+    if entry.get() == placeholder_text:
+        entry.delete(0, END)
 
-    # Create a Treeview widget with 3 columns
-    treeview = ttk.Treeview(root, columns=("col1", "col2", "col3"), show="headings")
-    treeview.pack(fill="both", expand=True)
+root = Tk()
 
-    # Set the column headings
-    treeview.heading("col1", text="Column 1")
-    treeview.heading("col2", text="Column 2")
-    treeview.heading("col3", text="Column 3")
+placeholder_text = "Enter a song"
 
-    # Add some sample data
-    for i in range(10):
-        treeview.insert("", "end", values=("Item " + str(i), "Value " + str(i), "Description " + str(i)))
+entry = Entry(root)
+entry.insert(0, placeholder_text)
+entry.bind("<FocusIn>", clear_placeholder)
+entry.pack()
 
-    root.mainloop()
-
-if __name__ == "__main__":
-    main()
+root.mainloop()
