@@ -4,7 +4,11 @@ buscar canciones, álbumes y artistas.
 """
 
 from tkinter import *
-import functions
+from functions import *
+
+#Funciones para abrir las opciones
+def open_agg():
+    agg()
 
 #Ventana
 root = Tk()
@@ -22,7 +26,7 @@ box.columnconfigure(2, weight = 1)
 #Botones
 btn_agregar = Button(root, text = "Agregar",width = 5, borderwidth = 3, relief = "solid",
                        bg = "dark slate gray", fg = "white", font = ("Roboto", 10, "bold"),
-                       command = functions.agg)
+                       command = open_agg)
 btn_agregar.place(x = 10, y = 10)
 
 btn_buscar = Button(root, text = "Buscar", width = 5, borderwidth = 3, relief = "solid",
@@ -39,7 +43,9 @@ btn_salir = Button(root, text = "Salir", width = 5, borderwidth = 3, relief = "s
 btn_salir.place(x = 218, y = 550)
 
 #Scrollbar
-bar = Scrollbar(box, borderwidth = 2, relief = "flat")
-bar.pack(side = RIGHT, fill = Y)
+vbar = Scrollbar(box, orient = VERTICAL, borderwidth = 2, relief = "flat")
+vbar.pack(side = RIGHT, fill = Y)
+hbar = Scrollbar(box, orient = HORIZONTAL, borderwidth = 2, relief = "flat")
+hbar.pack(side = BOTTOM, fill = X)
 
 root.mainloop()

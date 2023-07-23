@@ -26,8 +26,17 @@ def agg():
         
         if entry3.get() == "":
             entry3.insert(0, placeholder_text[2])
+        
+    def add_to_list():
+        import main
+        a = entry1.get()
+        b = entry2.get()
+        c = entry3.get()
+
+        main.box.insert(0, (a, b, c))
+        opt_window.destroy()
     
-    opt_window = Tk()
+    opt_window = Toplevel()
     opt_window.geometry("200x250")
     opt_window.title("Agregar canción a la lista")
     opt_window.configure(bg = "dark slate gray")
@@ -69,4 +78,5 @@ def agg():
             command = opt_window.destroy).place(x = 100, y = 200)
 
     Button(opt_window, text = "Agregar", borderwidth = 3, relief = "solid",
-            fg = "white", bg = "dark green", font = ("Roboto", 10, "bold")).place(x = 10, y = 200)
+            fg = "white", bg = "dark green", font = ("Roboto", 10, "bold"),
+            command = add_to_list).place(x = 10, y = 200)
