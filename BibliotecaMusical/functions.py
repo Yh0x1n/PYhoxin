@@ -80,3 +80,20 @@ def agg():
     Button(opt_window, text = "Agregar", borderwidth = 3, relief = "solid",
             fg = "white", bg = "dark green", font = ("Roboto", 10, "bold"),
             command = add_to_list).place(x = 10, y = 200)
+
+#Función para eliminar canciones
+def elim():
+    import main
+    selecc = main.box.curselection()
+    if selecc:
+        from tkinter import messagebox
+
+        messagebox.askquestion("Eliminar", "¿Quieres eliminar esta canción de la lista?")
+        if 'yes':
+            main.box.delete(selecc)
+        else:
+            pass
+
+#Función para buscar canciones
+def busc():
+    pass
