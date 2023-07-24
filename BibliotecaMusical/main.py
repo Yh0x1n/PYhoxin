@@ -34,7 +34,8 @@ btn_buscar = Button(root, text = "Buscar", width = 5, borderwidth = 3, relief = 
 btn_buscar.place(x = 115, y = 10)
 
 btn_eliminar = Button(root, text = "Eliminar", width = 5, borderwidth = 3, relief = "solid",
-                         bg = "dark red", fg = "white", font = ("Roboto", 10, "bold"))
+                         bg = "dark red", fg = "white", font = ("Roboto", 10, "bold"),
+                         command = elim)
 btn_eliminar.place(x = 218, y = 10)
 
 btn_salir = Button(root, text = "Salir", width = 5, borderwidth = 3, relief = "solid",
