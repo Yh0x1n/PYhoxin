@@ -1,2 +1,0 @@
-Requirement already satisfied: mariadb in ./env/lib/python3.12/site-packages (1.1.10)
-Requirement already satisfied: packaging in ./env/lib/python3.12/site-packages (from mariadb) (24.1)
