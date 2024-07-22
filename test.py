@@ -1,21 +1,19 @@
 #Un archivo de prueba
+
 import mariadb
 
 try:
     conn = mariadb.connect(
-    user='Yh0x',
-    password='12345',
-    host='localhost',
-    port=3306,
-    database='prueba'
+        user = 'Yh0xr',
+        password = '12345',
+        host = 'localhost',
+        port = 3306,
     )
-    print('Connection succesful')
     c = conn.cursor()
-    c.execute('drop database if exists prueba;')
-    c.execute('create database if not exists prueba;')
-    c.execute('use prueba;')
+    c.execute('DROP DATABASE IF EXISTS prueba;')
+    c.execute('CREATE DATABASE IF NOT EXISTS prueba;')
+    c.execute('USE prueba;')
 
+    print('Connection succesful')
 except mariadb.Error as e:
     print(e)
-
-c.close()
