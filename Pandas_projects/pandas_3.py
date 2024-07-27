@@ -2,5 +2,6 @@
 
 import pandas as pd
 
-df = pd.read_csv('datos.csv')
-df
+convertir = pd.read_excel('datos.xls')
+
+convertir.to_csv('datos.csv', index = None, header = True)
