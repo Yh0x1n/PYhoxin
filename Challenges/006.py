@@ -24,7 +24,7 @@ def calc_ar_local(route):
     with Image.open(route) as img:
         return img.width / img.height
 
-url = 'https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png'
-route = '/home/yh0xr/Imágenes/Capturas de pantalla/paquita.png'
-print(f'el aspect ratio es {calc_ar(url)}')
-print(f'el aspect ratio de paquita es {calc_ar_local(route)}')
+x = 'https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png'
+y = '/home/yh0xr/Imágenes/Capturas de pantalla/paquita.png'
+print(f'el aspect ratio es {calc_ar(x)}')
+print(f'el aspect ratio de paquita es {calc_ar_local(y)}')
